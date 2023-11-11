@@ -1,7 +1,12 @@
 #pragma once
 
-class field
+class Field
 {
-	int xcoordinate;
-	int ycoordinate;
+	int width;
+	int height;
+
+public:
+	Field(int width = 100, int height = 100);
+	int GetWidth() const;
+	int GetHeight() const;
 };

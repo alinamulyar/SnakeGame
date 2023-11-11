@@ -1,8 +1,21 @@
 #pragma once
+#include "food.h"
+#include "direction.h"
+#include "point.h"
 
-class snake
+
+class Snake
 {
-	int length;
-	float speed;
 	bool life;
+	Point segments;
+	int nrsegments;
+
+public:
+	Snake();
+	Snake(const Point& _position);
+	void Move(Direction direction);
+	int GetLength() const;
+	Point GetPosition() const;
+	void Eat(const Food& food);
+
 };

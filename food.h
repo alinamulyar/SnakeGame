@@ -1,8 +1,13 @@
 #pragma once
+#include "point.h"
 
-class food
+class Food
 {
-	int amount;
-	int xcoordinate;
-	int ycoordinate;
+	Point _position;
+
+public:
+	Food();
+	Food(const Point& position);
+	Point GetPosition() const;
+	
 };
