@@ -1,18 +1,18 @@
-# Makefile
+
 
 CXX = g++
 CXXFLAGS = -std=c++11
 
-# Список объектных файлов
+
 OBJECTS = main.o direction.o engine.o field.o food.o point.o snake.o
 
-# Имя цели (ваше приложение)
-TARGET = your_game
 
-# Имена библиотек
+TARGET = game
+
+
 LIBS = -ldirection -lengine -lfield -lfood -lpoint -lsnake
 
-# Сборка по умолчанию
+
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS) libdirection.a libengine.a libfield.a libfood.a libpoint.a libsnake.a
